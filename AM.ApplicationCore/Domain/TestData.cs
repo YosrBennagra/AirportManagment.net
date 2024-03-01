@@ -24,8 +24,11 @@ namespace AM.ApplicationCore.Domain
         // Staffs
         public static Staff captain = new Staff
         {
-            FirstName = "captain",
-            LastName = "captain",
+            FullName = new()
+            {
+                FirstName = "captain",
+                LastName = "captain",
+            },
             EmailAdress = "captain.captain@gmail.com",
             BirthDate = new DateTime(1965, 01, 01),
             EmploymentDate = new DateTime(1999, 01, 01),
@@ -33,8 +36,11 @@ namespace AM.ApplicationCore.Domain
         };
         public static Staff hostess1 = new Staff
         {
-            FirstName = "hostess1",
-            LastName = "hostess1",
+            FullName = new()
+            {
+                FirstName = "hostess1",
+                LastName = "hostess1",
+            },
             EmailAdress = "hostess1.hostess1@gmail.com",
             BirthDate = new DateTime(1995, 01, 01),
             EmploymentDate = new DateTime(2020, 01, 01),
@@ -42,8 +48,11 @@ namespace AM.ApplicationCore.Domain
         };
         public static Staff hostess2 = new Staff
         {
-            FirstName = "hostess2",
-            LastName = "hostess2",
+            FullName = new()
+            {
+                FirstName = "hostess2",
+                LastName = "hostess2",
+            },
             EmailAdress = "hostess2.hostess2@gmail.com",
             BirthDate = new DateTime(1996, 01, 01),
             EmploymentDate = new DateTime(2020, 01, 01),
@@ -52,56 +61,61 @@ namespace AM.ApplicationCore.Domain
         // Travellers
         public static Traveller traveller1 = new Traveller
         {
-            FirstName = "traveller1",
-            LastName =
-        "traveller1",
+            FullName = new()
+            {
+                FirstName = "traveller1",
+                LastName = "traveller1",
+            },
             EmailAdress = "traveller1.traveller1@gmail.com",
-            BirthDate = new
-        DateTime(1980, 01, 01),
+            BirthDate = new DateTime(1980, 01, 01),
             HealthInformation = "no troubles",
             Nationality = "American"
         };
         public static Traveller traveller2 = new Traveller
         {
-            FirstName = "traveller2",
-            LastName =
-        "traveller2",
+            FullName = new()
+            {
+                FirstName = "traveller2",
+                LastName = "traveller2",
+            },
             EmailAdress = "traveller2.traveller2@gmail.com",
-            BirthDate = new
-        DateTime(1981, 01, 01),
+            BirthDate = new DateTime(1981, 01, 01),
             HealthInformation = "Some troubles",
             Nationality = "French"
         };
         public static Traveller traveller3 = new Traveller
         {
-            FirstName = "traveller3",
-            LastName =
-        "traveller3",
+            FullName = new()
+            {
+                FirstName = "traveller3",
+                LastName = "traveller3",
+            },
             EmailAdress = "traveller3.traveller3@gmail.com",
-            BirthDate = new
-        DateTime(1982, 01, 01),
+            BirthDate = new DateTime(1982, 01, 01),
             HealthInformation = "no troubles",
             Nationality = "Tunisian"
         };
         public static Traveller traveller4 = new Traveller
         {
-            FirstName = "traveller4",
-            LastName =
-        "traveller4",
+            FullName = new()
+            {
+                FirstName = "traveller4",
+                LastName = "traveller4",
+            },
             EmailAdress = "traveller4.traveller4@gmail.com",
-            BirthDate = new
-        DateTime(1983, 01, 01),
+            BirthDate = new DateTime(1983, 01, 01),
             HealthInformation = "Some troubles",
             Nationality = "American"
         };
         public static Traveller traveller5 = new Traveller
         {
-            FirstName = "traveller5",
-            LastName =
-        "traveller5",
+            FullName = new()
+            {
+                FirstName = "traveller5",
+                LastName = "traveller5",
+            },
             EmailAdress = "traveller5.traveller5@gmail.com",
-            BirthDate = new
-        DateTime(1984, 01, 01),
+            BirthDate = new DateTime(1984, 01, 01),
             HealthInformation = "Some troubles",
             Nationality = "Spanish"
         };
@@ -113,15 +127,21 @@ namespace AM.ApplicationCore.Domain
             Destination = "Paris",
             EffectiveArriaval = new DateTime(2022, 01, 01, 17, 10, 10),
             EstimatedDuration = 110,
-            Passengers = new List<Passenger> { captain, hostess1, hostess2, traveller1, traveller2,
-traveller3, traveller4, traveller5 }
-        ,
+            Passengers = new List<Passenger> {
+                captain, 
+                hostess1, 
+                hostess2, 
+                traveller1, 
+                traveller2,
+                traveller3, 
+                traveller4, 
+                traveller5
+            },
             Plane = Airbusplane
         };
         public static Flight flight2 = new Flight
         {
-            FlightDate = new DateTime(2022, 02, 01, 21, 10,
-        10),
+            FlightDate = new DateTime(2022, 02, 01, 21, 10, 10),
             Destination = "Paris",
             EffectiveArriaval = new DateTime(2022, 02, 01, 23, 10, 10),
             EstimatedDuration = 105,
@@ -170,9 +190,9 @@ traveller3, traveller4, traveller5 }
             flight3,
             flight4,
             flight5,
-            flight6 
+            flight6
         };
     }
 
-  
+
 }

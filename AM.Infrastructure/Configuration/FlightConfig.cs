@@ -17,7 +17,10 @@ namespace AM.Infrastructure.Configuration
                 .HasMany(p => p.Passengers)
                 .WithMany(p => p.Flights)
                 .UsingEntity(f=>f.ToTable("VolPassenger"));
-            builder.HasOne(p=>p.PlaneFK).WithMany(f=>f.Flights).HasForeignKey
+            /*builder
+                .HasOne(p=>p.Plane)
+                .WithMany(f=>f.Flights)
+                .HasForeignKey(p=>p.PlaneFK);*/
         }
     }
 }

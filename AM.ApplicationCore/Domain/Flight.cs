@@ -24,7 +24,7 @@ namespace AM.ApplicationCore.Domain
         public DateTime EffectiveArriaval { get; set; }
         public string Departure { get; set; }
         public string Destination { get; set; }
-        /*[ForeignKey("Plane")]*/
+        [ForeignKey("Plane")]
         public int PlaneFK { get; set; }
         /*[ForeignKey("PlaneFK")]*/
         public Plane Plane { get; set; }

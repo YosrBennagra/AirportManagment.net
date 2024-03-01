@@ -1,4 +1,5 @@
 ﻿using AM.ApplicationCore.Domain;
+using AM.Infrastructure.Configuration;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace AM.Infrastructure
  *4 chaine de connection
  *5 Add-migration {nom}
  * ken build failed ta3mel rebuild solution
+ * Update-database
  */
     public class AMContext : DbContext
     {
@@ -30,6 +32,13 @@ namespace AM.Infrastructure
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb; Initial Catalog=AirportManagementDB;Integrated Security=true;"); 
             base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new FlightConfig());
+            modelBuilder.ApplyConfiguration(new PlaneConfig());
+            base.OnModelCreating(modelBuilder);
         }
 
     }
